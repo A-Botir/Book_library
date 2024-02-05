@@ -57,25 +57,37 @@ cardCreater();
 dataList.addEventListener("click", function (event) {
   const moreInfoButton = event.target.closest(".bookmark");
   if (moreInfoButton) {
-      handleMoreInfoClick(event);
+      addNewLi(event);
   }
 });
 
-const handleMoreInfoClick = (event) => {
+const addNewLi = (event) => {
   const card = event.target.closest(".card");
   if (!card) return;
-
   const authorElement = card.querySelector(".card_name");
   const titleElement = card.querySelector(".card_title");
 
   const author = authorElement.textContent;
   const title = titleElement.textContent;
+ 
+  const bookData = {
+    booktitle: title,
+    authortitle: author
+  };
+  const storageKey = `${title}`;
+
+  localStorage.setItem(storageKey, JSON.stringify(bookData));
 
   const navItem = document.createElement("li");
   navItem.classList.add("navbar_item");
+
+  const storedData = localStorage.getItem(storageKey);
+  const parsedData = JSON.parse(storedData);
+
+  navItem.classList.add("navbar_item");
   navItem.innerHTML = `<div>
-    <h2 class="navbar_item__title">${title}</h2>
-    <p class="navbar_item__subtitle">Author: ${author}</p>
+    <h2 class="navbar_item__title">${parsedData.booktitle}</h2>
+    <p class="navbar_item__subtitle">Author: ${parsedData.authortitle}</p>
   </div>
   <div class="navbar_img_group">
     <button class="navbar_img"><img src="./assets/image/icon/book-open 1.svg" alt="book"></button>
@@ -87,6 +99,8 @@ const handleMoreInfoClick = (event) => {
   const deleteButton = navItem.querySelector(".navbar_img--2");
   deleteButton.addEventListener("click", () => {
       navItem.remove();
+      const delitem = navItem.firstElementChild.firstElementChild.textContent;
+      localStorage.removeItem(`${delitem}`);
   });
 };
 
