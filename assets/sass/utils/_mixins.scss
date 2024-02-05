@@ -1,0 +1,5 @@
+@mixin dFlex ($jContent: center, $aItem: center){
+    display: flex;
+    justify-content: $jContent;
+    align-items: $aItem;
+}

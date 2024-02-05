@@ -1,0 +1,76 @@
+.right_sidebar{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 40.5%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    .right_sidebar__head{
+        @include dFlex(space-between, center);
+        padding: 32px 23px;
+        background: rgb(248, 250, 253);
+        .right_sidebar__title{
+            color: rgb(34, 37, 49);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+        .right_sidebar__icon{
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .right_sidebar__info{
+        @include dFlex(center, start);
+        flex-direction: column;
+        padding: 44px 35px 0 47px;
+        margin-bottom: 125px;
+        .right_sidebar__img{
+            width: 229px;
+            height: 300px;
+            margin-left: 25%;
+            margin-bottom: 51px;
+        }
+        .right_sidebar__text{
+            color: rgb(88, 102, 126);
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 170.3%;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-bottom: 33px;
+        }
+        .right_sidebar__list{
+            @include dFlex(center, start);
+            flex-direction: column;
+            gap: 17px;
+            .right_sidebar__item{
+                color: rgb(34, 37, 49);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0%;
+                .right_sidebar__category{
+                    padding: 5px 19px;
+                    border-radius: 30px;
+                    background: rgba(13, 117, 255, 0.09);
+                    color: rgb(13, 117, 255);
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    letter-spacing: 0%;
+                }
+            }
+        }
+
+    }
+    .right_sidebar__link{
+        margin-left: auto;
+        .btn-secondary{
+            width: 112px;
+        }
+    }
+}

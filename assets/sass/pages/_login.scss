@@ -1,0 +1,78 @@
+.main_login{
+    height: 100%;
+    .login{
+        @include dFlex;
+        flex-direction: column;
+        height: 100%;
+        .login_logo{
+            width: 226px;
+            height: 44px;
+        }
+        .login_form{
+            max-width: 300px;
+            margin-top: 50px;
+            .login_label{
+                @include dFlex;
+                padding: 12px;
+                width: 300px;
+                gap: 20px;
+                border-radius: 4px;
+                border: 1px solid #FFFFFF;
+                opacity: 0.9;
+                &:hover{
+                    opacity: 1;
+                }
+                .login_label__img{
+                    width: 20px;
+                    height: 20px;
+                }
+                .login_input{
+                    background: none;
+                    outline: none;
+                    border: none;
+                    font-family: 'Montserrat';
+                    font-size: 16px;
+                    font-weight: 300;
+                    flex-grow: 1;
+                    color: rgb(255, 255, 255);
+                    &::placeholder{
+                        color: rgb(255, 255, 255);
+                        line-height: 20px;
+                        letter-spacing: 0px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .label_psw_take{
+                margin: 20px 0 40px 0;
+                .label_psw__error{
+                    display: block;
+                    margin-top: 4px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: rgb(255, 0, 0);
+                }
+            }
+            .login_btn{
+                padding: 13px 0;
+                width: 300px;
+                border-radius: 4px;
+                background-color: #FFFFFF;
+                color: rgb(13, 117, 255);
+                font-family: 'Montserrat';
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0px;
+                text-align: center;
+                text-transform: uppercase;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+                transition: all 0.6s ease;
+                &:hover{
+                    background-color: rgb(13, 117, 255);
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src:  local('Rubik Regular'),
+    url('/assets/font/Rubik/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src:  local('Rubik Medium'),
+    url('/assets/font/Rubik/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src:  local('Montserrat-Light'),
+    url('/assets/font/Montserrat/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src:  local('Montserrat-SemiBold'),
+    url('/assets/font/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Noto sans';
+    font-style: normal;
+    font-weight: 500;
+    src:  local('NotoSans-Medium'),
+    url('/assets/font/Noto_Sans/NotoSans-Medium.ttf') format('truetype');
+}

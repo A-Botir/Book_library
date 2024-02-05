@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookShelter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/image/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="page_container container">
+        <header class="header">
+          <a href="#" class="header_logo"
+            ><img src="./assets/image/icon/logo.svg" alt="logotype"
+          /></a>
+          <form action="" class="header_form">
+            <label for="searchcol" class="header_label">
+              <img
+                src="./assets/image/icon/lupa.svg"
+                alt="lupa"
+                class="header_input_icon"
+              />
+              <input
+                type="search"
+                placeholder="Search books"
+                class="header_input"
+                id="searchcol"
+              />
+            </label>
+          </form>
+          <div class="header_group">
+            <img
+              src="./assets/image/icon/sun.svg"
+              alt="sun icons"
+              class="header_icon"
+            />
+            <a href="#"
+              ><button class="header_btn btn btn-primary" id="logout">
+                Logout
+              </button></a
+            >
+          </div>
+        </header>
+      </div>
+      <div class="result">
+        <p class="result_text page_container">Showing <span id="result"></span> Result(s)</p>
+      </div>
+      <div class="page_container container">
+        <div class="content">
+          <nav class="navbar">
+            <h2 class="navbar_title">Bookmarks</h2>
+            <p class="navbar_subtitle">
+              If you don’t like to read, you haven’t found the right book
+            </p>
+            <ul class="navbar_list"></ul>
+          </nav>
+          <section class="card_content">
+            <div class="row grid gap-3" id="content">
+              <!-- <div class="col-4 card p-2">
+                <div class="card_image__box">
+                  <img
+                    src="./assets/image/photo/card_image1.png"
+                    alt="book img"
+                  />
+                </div>
+                <h3 class="card_title">Python</h3>
+                <p class="card_name">David M. Beazley</p>
+                <p class="card_date">2009</p>
+                <div class="card_btn__group">
+                  <a href="#"
+                    ><button class="card_button card_button--1 btn btn-warning">
+                      Bookmark
+                    </button></a
+                  >
+                  <a href="#"
+                    ><button
+                      class="card_button card_button--2 btn btn-outline-info"
+                    >
+                      More info
+                    </button></a
+                  >
+                </div>
+                <a href="#"><button class="btn btn-secondary">Read</button></a>
+              </div>
+              <div class="col-4 card p-2">
+                <div class="card_image__box">
+                  <img
+                    src="./assets/image/photo/card_image1.png"
+                    alt="book img"
+                  />
+                </div>
+                <h3 class="card_title">Python</h3>
+                <p class="card_name">David M. Beazley</p>
+                <p class="card_date">2009</p>
+                <div class="card_btn__group">
+                  <a href="#"
+                    ><button class="card_button card_button--1 btn btn-warning">
+                      Bookmark
+                    </button></a
+                  >
+                  <a href="#"
+                    ><button
+                      class="card_button card_button--2 btn btn-outline-info"
+                    >
+                      More info
+                    </button></a
+                  >
+                </div>
+                <a href="#"><button class="btn btn-secondary">Read</button></a>
+              </div>
+              <div class="col-4 card p-2">
+                <div class="card_image__box">
+                  <img
+                    src="./assets/image/photo/card_image1.png"
+                    alt="book img"
+                  />
+                </div>
+                <h3 class="card_title">Python</h3>
+                <p class="card_name">David M. Beazley</p>
+                <p class="card_date">2009</p>
+                <div class="card_btn__group">
+                  <a href="#"
+                    ><button class="card_button card_button--1 btn btn-warning">
+                      Bookmark
+                    </button></a
+                  >
+                  <a href="#"
+                    ><button
+                      class="card_button card_button--2 btn btn-outline-info"
+                    >
+                      More info
+                    </button></a
+                  >
+                </div>
+                <a href="#"><button class="btn btn-secondary">Read</button></a>
+              </div> -->
+            </div>
+          </section>
+        </div>
+      </div>
+      <section class="right_sidebar page_container">
+        <div class="right_sidebar__head">
+          <h4 class="right_sidebar__title"></h4>
+          <button class="right_sidebar__btn" id="closebtn">
+            <img
+              src="./assets/image/icon/close.svg"
+              alt="close icon"
+              class="right_sidebar__icon"
+            />
+          </button>
+        </div>
+        <div class="right_sidebar__info">
+          <img class="right_sidebar__img" />
+          <p class="right_sidebar__text"></p>
+          <ul class="right_sidebar__list">
+            <li class="right_sidebar__item">
+              Author :
+              <span class="right_sidebar__category" id="author"> &nbsp;</span>
+            </li>
+            <li class="right_sidebar__item">
+              Published :
+              <span class="right_sidebar__category" id="published">
+                &nbsp;</span
+              >
+            </li>
+            <li class="right_sidebar__item">
+              Publishers :
+              <span class="right_sidebar__category" id="publishers">
+                &nbsp;</span
+              >
+            </li>
+            <li class="right_sidebar__item">
+              Categories :
+              <span class="right_sidebar__category" id="categories">
+                &nbsp;</span
+              >
+            </li>
+            <li class="right_sidebar__item">
+              Pages Count :
+              <span class="right_sidebar__category" id="pagescount">
+                &nbsp;</span
+              >
+            </li>
+          </ul>
+          <a href="#" class="right_sidebar__link"
+            ><button class="btn btn-secondary">Read</button></a
+          >
+        </div>
+      </section>
+    </div>
+
+    <script src="./assets/script/main.js"></script>
+  </body>
+</html>
