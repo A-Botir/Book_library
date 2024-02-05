@@ -117,7 +117,7 @@
                             font-size: 14px;
                             font-weight: 500;
                             line-height: normal;
-                            &--2{
+                            &__2{
                                 background: rgba(13, 117, 255, 0.05);
                                 margin-left: 10px;
                             }
@@ -134,7 +134,7 @@
             }
         }
     }
-    .checker:checked + .right_sidebar{
-        display: block;
-    }
+}
+.wrapper{
+    opacity: 0.5;
 }

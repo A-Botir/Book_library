@@ -21,7 +21,7 @@ const sendInfo = (e) => {
       newuser,
       newpsw,
     });
-    const key = `Userdata_${Date.now()}`
+    const key = `Userdata_${Date.now()}`  
     localStorage.setItem(key, userData);
     window.location.href = "../../Home.html";
   }

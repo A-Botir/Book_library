@@ -1,5 +1,5 @@
 .right_sidebar{
-    display: none;
+    display: block;
     background-color: white;
     height: 100vh;
     position: absolute;
@@ -69,4 +69,8 @@
         }
 
     }
+}
+
+.left_sidebar{
+    display: none;
 }

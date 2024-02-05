@@ -137,7 +137,7 @@ button {
 }
 
 .right_sidebar {
-  display: none;
+  display: block;
   background-color: white;
   height: 100vh;
   position: absolute;
@@ -212,6 +212,10 @@ button {
   font-weight: 400;
   line-height: 17px;
   letter-spacing: 0%;
+}
+
+.left_sidebar {
+  display: none;
 }
 
 .wrap {
@@ -350,7 +354,7 @@ button {
   font-weight: 500;
   line-height: normal;
 }
-.wrap .content .card_content .row .card .card_btn__group .card_button--2 {
+.wrap .content .card_content .row .card .card_btn__group .card_button__2 {
   background: rgba(13, 117, 255, 0.05);
   margin-left: 10px;
 }
@@ -361,8 +365,9 @@ button {
   border-radius: 4px;
   background: #75828a;
 }
-.wrap .checker:checked + .right_sidebar {
-  display: block;
+
+.wrapper {
+  opacity: 0.5;
 }
 
 .main_login {
