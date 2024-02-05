@@ -38,7 +38,7 @@ h6, p {
 
 ul {
   list-style: none;
-  padding: 0px;
+  padding: 0;
 }
 
 img {
@@ -138,6 +138,8 @@ button {
 
 .right_sidebar {
   display: none;
+  background-color: white;
+  height: 100vh;
   position: absolute;
   z-index: 3;
   width: 40.5%;
@@ -211,12 +213,6 @@ button {
   line-height: 17px;
   letter-spacing: 0%;
 }
-.right_sidebar .right_sidebar__link {
-  margin-left: auto;
-}
-.right_sidebar .right_sidebar__link .btn-secondary {
-  width: 112px;
-}
 
 .wrap {
   position: relative;
@@ -234,6 +230,7 @@ button {
   align-items: start;
   padding: 40px 0 33px 0;
   gap: 40px;
+  background-color: #F8FAFD;
 }
 .wrap .content .navbar {
   max-width: 268px;
@@ -255,7 +252,7 @@ button {
   line-height: 155.6%;
 }
 .wrap .content .navbar .navbar_list {
-  padding: 0 25px;
+  padding: 25px 0;
 }
 .wrap .content .navbar .navbar_list .navbar_item {
   display: flex;
@@ -363,6 +360,9 @@ button {
   height: 37px;
   border-radius: 4px;
   background: #75828a;
+}
+.wrap .checker:checked + .right_sidebar {
+  display: block;
 }
 
 .main_login {

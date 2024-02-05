@@ -11,6 +11,7 @@
         @include dFlex(left, start);
         padding: 40px 0 33px 0;
         gap: 40px;
+        background-color: #F8FAFD;
         .navbar{
             max-width: 268px;
             width: 100%;
@@ -30,7 +31,7 @@
                 line-height: 155.6%;
             }
             .navbar_list{
-                padding: 0 25px;
+                padding: 25px 0;
                 .navbar_item{
                     @include dFlex( space-between, center);
                     width: 218px;
@@ -132,5 +133,8 @@
                 }
             }
         }
+    }
+    .checker:checked + .right_sidebar{
+        display: block;
     }
 }

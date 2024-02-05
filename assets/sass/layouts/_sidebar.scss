@@ -1,5 +1,7 @@
 .right_sidebar{
     display: none;
+    background-color: white;
+    height: 100vh;
     position: absolute;
     z-index: 3;
     width: 40.5%;
@@ -66,11 +68,5 @@
             }
         }
 
-    }
-    .right_sidebar__link{
-        margin-left: auto;
-        .btn-secondary{
-            width: 112px;
-        }
     }
 }
