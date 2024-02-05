@@ -137,7 +137,7 @@ button {
 }
 
 .right_sidebar {
-  display: block;
+  display: block !important;
   background-color: white;
   height: 100vh;
   position: absolute;
@@ -367,7 +367,7 @@ button {
 }
 
 .wrapper {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .main_login {

@@ -100,9 +100,42 @@ const addNewLi = (event) => {
   deleteButton.addEventListener("click", () => {
       navItem.remove();
       const delitem = navItem.firstElementChild.firstElementChild.textContent;
-      localStorage.removeItem(`${delitem}`);
+      localStorage.removeItem(`${delitem}`)
   });
 };
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.addEventListener("click", function (event) {
+    const moreInfoButton = event.target.closest(".card_button__2");
+    if (moreInfoButton) {
+      const rightSidebar = document.querySelector(".left_sidebar");
+      const wrap = document.querySelector(".wrap");
+      if (rightSidebar) {
+        rightSidebar.classList.add("right_sidebar");
+      }
+      if (wrap) {
+        wrap.classList.add("wrapper");
+      }
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.addEventListener("click", function (event) {
+    const moreInfoButton = event.target.closest("#closebtn");
+    if (moreInfoButton) {
+      const rightSidebar = document.querySelector(".left_sidebar");
+      const wrap = document.querySelector(".wrap");
+      if (rightSidebar) {
+        rightSidebar.classList.remove("right_sidebar");
+      }
+      if (wrap) {
+        wrap.classList.remove("wrapper");
+      }
+    }
+  });
+});
+
+
 
 const searchInput = document.getElementById("searchcol");
 const searchCard = () => {
