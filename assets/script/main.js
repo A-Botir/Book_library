@@ -55,36 +55,39 @@ const cardCreater = () => {
 cardCreater();
 
 dataList.addEventListener("click", function (event) {
-    const moreInfoButton = event.target.querySelectorAll(".bookmark");
-    if (moreInfoButton) {
-        handleMoreInfoClick();
-    }
+  const moreInfoButton = event.target.closest(".bookmark");
+  if (moreInfoButton) {
+      handleMoreInfoClick(event);
+  }
 });
 
-const handleMoreInfoClick = () => {
-    const authorElement = document.querySelector(".card_title");
-    const titleElement = document.querySelector(".card_name");
+const handleMoreInfoClick = (event) => {
+  const card = event.target.closest(".card");
+  if (!card) return;
 
-    const author = authorElement.textContent;
-    const title = titleElement.textContent;
+  const authorElement = card.querySelector(".card_name");
+  const titleElement = card.querySelector(".card_title");
 
-    const navItem = document.createElement("li");
-    navItem.classList.add("navbar_item");
-    navItem.innerHTML = `<div>
-      <h2 class="navbar_item__title">${title}</h2>
-      <p class="navbar_item__subtitle">Author: ${author}</p>
-    </div>
-    <div class="navbar_img_group">
-      <button class="navbar_img"><img src="./assets/image/icon/book-open 1.svg" alt="book"></button>
-      <button class="navbar_img--2"><img src="./assets/image/icon/delete 1.svg" alt="delete"></button>
-    </div>`;
+  const author = authorElement.textContent;
+  const title = titleElement.textContent;
 
-    listContent.appendChild(navItem);
+  const navItem = document.createElement("li");
+  navItem.classList.add("navbar_item");
+  navItem.innerHTML = `<div>
+    <h2 class="navbar_item__title">${title}</h2>
+    <p class="navbar_item__subtitle">Author: ${author}</p>
+  </div>
+  <div class="navbar_img_group">
+    <button class="navbar_img"><img src="./assets/image/icon/book-open 1.svg" alt="book"></button>
+    <button class="navbar_img--2"><img src="./assets/image/icon/delete 1.svg" alt="delete"></button>
+  </div>`;
 
-    const deleteButton = navItem.querySelector(".navbar_img--2");
-    deleteButton.addEventListener("click", () => {
-        navItem.remove();
-    });
+  listContent.appendChild(navItem);
+
+  const deleteButton = navItem.querySelector(".navbar_img--2");
+  deleteButton.addEventListener("click", () => {
+      navItem.remove();
+  });
 };
 
 const searchInput = document.getElementById("searchcol");
